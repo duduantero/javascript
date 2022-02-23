@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Contador</title>
+    <style>
+        body{
+    background: rgb(0, 0, 0);
+    background-image: url(https://c.wallhere.com/photos/a1/fc/1920x1080_px_Albert_Einstein_Formula_mathematics_physics_science_Special_Relativity-549404.jpg!d);
+    background-size: 1920px 1080px;
+    
+    border-radius: 10px;
+    max-width: 1920;
+    max-height: 1080;
+    margin: auto;
+
+    
+}
+
+header{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.404);
+    font-family:sans-serif;
+    font-size: 20px;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.39);
+    text-align: left;
+    padding: 15px;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+div{
+    text-align: left;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+footer{
+    color: rgb(55, 0, 253);
+    text-align: center;
+    font-style: italic;
+    font: bold;
+    margin-top: 50px;
+    padding: 15px;
+    
+}
+    </style>
+</head>
+<body>
+    <header>
+        <p>Super Contador V- 1.0</p>
+    </header>
+    <section>
+        <div id='dados'>
+            <p>Inicio:<input type="number" name="inicio" id="begin"></p>
+            <p></p>Fim:<input type="number" name="fim" id="end"></p>
+            <p></p>Passo:<input type="number" name="passo" id="passo"></p>
+            <p><input type="button" value="Contar" onclick="contar()"></p>
+        </div>
+        <div id="result">
+            Preparando contagem...
+        </div>
+    </section>
+    <script>
+        function contar(){
+    let ini = window.document.getElementById('begin')
+    let fim = window.document.getElementById('end')
+    let passo = window.document.getElementById('passo')
+    let res = window.document.getElementById("result")
+    
+    if(ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        window.alert('ERRO:Faltam dados ! ')
+        res.innerHTML = 'Impossível contar !'
+        
+    }else {
+        res.innerHTML = 'Contando: '
+        let i =Number(ini.value)
+        let f =Number(fim.value)
+        let p =Number(passo.value)
+        if (p <= 0){
+             window.alert('Passo inválido ! Passo um terá valor atribuido a 1.')
+            p = 1
+        }
+        //contagem 
+        if(i<f){
+        for(let c = i;c <= f; c+= p){
+            res.innerHTML+= ` ${c} \u{2192}`
+
+        }
+            res.innerHTML += ` Acabou !`
+        }else{
+            //contagem regressiva
+            for(let c = i;c >=f; c-=p) {
+                res.innerHTML+= ` ${c} \u{2192}`
+            }
+        res.innerHTML += ` Acabou !`
+    }
+
+    }
+        
+}
+    </script>
+    <footer>
+        <p>&copy;Eduardo A. de Moraes</p>
+    </footer>
+</body>
+
+</html>

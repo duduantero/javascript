@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Contador</title>
+    <style>
+        body{
+    background: rgb(0, 0, 0);
+    background-image: url(https://c.wallhere.com/photos/a1/fc/1920x1080_px_Albert_Einstein_Formula_mathematics_physics_science_Special_Relativity-549404.jpg!d);
+    background-size: 1920px 1080px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    max-width: 1920;
+    max-height: 1080;
+    margin: auto;
+    
+}
+
+header{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.404);
+    font-family:sans-serif;
+    font-size: 20px;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+section{
+    background: rgb(255, 255, 255);
+    padding: 15px;
+    width: 500px;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.39);
+    text-align: left;
+    border: solid 3px;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0.062);
+    border-style: ridge;
+
+    
+}
+
+div{
+    text-align: left;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+footer{
+    color: rgb(55, 0, 253);
+    text-align: center;
+    font-style: italic;
+    font: bold;
+    margin-top: 50px;
+    padding: 15px;
+    
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <p>Tabuada V- 1.0</p>
+    </header>
+    <section>
+        <div id='dados'>
+            <p>Número:<input type="number" name="number" id="number1"></p>
+            
+            <p><input type="button" value="Multiplicar" onclick="multiplicar()"></p>
+        </div>
+        <div id="result">
+            <select name="tabuada" id="seltab"></select>
+            Preparando multiplicação...
+            
+        </div>
+    </section>
+    <script>
+        function multiplicar(){
+    let num = window.document.getElementById('number1')
+    let res = window.document.getElementById("result")
+    let tab = window.document.getElementById('seltab')
+    
+    if(num.value.length == 0 ) {
+        window.alert('ERRO:Faltam dados ! ')
+        res.innerHTML = 'Impossível multiplicar !'
+    }else {
+        res.innerHTML = 'Multiplicando: '
+        let n =Number(num.value)
+        let r
+        for (let m = 0; m <=10 ; m++) {
+            r = n * m
+            res.innerHTML += `<br>
+            ${n} x ${m} = ${r} <br>`
+        }
+    }
+}
+    </script>
+    <footer>
+        <p>&copy;Eduardo A. de Moraes</p>
+    </footer>
+</body>
+
+</html>

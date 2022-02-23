@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passo em DOM</title>
+    <style>
+        body {
+            background: rgb(185, 128, 230);
+            color: rgb(220, 201, 234);
+            font: normal 18pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM </h1>
+    <p>Aqui vai o resultado</p> <!--[0] -->
+    <p>Aprendendo a usar o <strong>DOM </strong>em JavaScript</p> <!--[2] -->
+    <div id='msg'>Clique em mim</div>
+    <!--<div name='msg'>Clique em mim</div> -->
+
+    <script>
+        // window.document.writeln('Olá, Mundo !');
+        //window.document.write(window.document.characterSet)
+        //window.document.write(window.document.URL)
+        //selecionando elementos por marca
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var p2 = window.document.getElementsByTagName('p')[1]
+        //var d =window.document.getElementById('msg')
+        //var d =window.document.getElementsByName('msg')
+        //var d = window.document.querySelector('div#msg') método mais recente
+        
+        
+        //corpo.style.background = 'black'
+
+        //window.document.write('Está escrito assim: ' + p1.innerText)
+        //p1.style.color = 'purple'
+        //document.write(p1.innerHTML)
+
+        //window.alert(p2.innerHTML)
+
+        ///window.document.write('Está escrito assim: ' +msg.innerText)
+
+        ///d.style.background = 'green'
+        ///d.innerText = 'Estou aguardando...'
+
+        //window.document.getElementById('msg').innerText = 'Olá'
+
+        //window.document.getElementsByName('msg')[0]
+        //d.innerText = 'Olá'
+        
+        //d.style.color = 'blue'
+        //d.style.background = 'blue'
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body{
+    background: #98BAE7;
+
+}
+
+header{
+    color: #f7f2f2;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.404);
+    font-family:sans-serif;
+    font-size: 20px;
+    
+
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.39);
+    
+    
+
+}
+img#foto{
+    text-align: center;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font: bold;
+    
+
+}

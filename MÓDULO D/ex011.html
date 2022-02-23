@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento de Imigração da República Federativa do Brasil</title>
+    <style>
+        .country{
+            font: normal 20px bold;
+            margin-top: 100px;
+           
+
+        }
+        
+    </style>
+</head>
+<body>
+    
+    Informe o País de origem: <input type="text" class="country" id="naci">
+    <input type="button" value="Pesquisar" name="country" onclick="buscar()">
+<div class="country"></div>
+
+</tag>
+    <script>
+        function buscar() {
+        var País = window.document.querySelector('input#naci').value.toLowerCase()
+        var res = window.document.querySelector('div')
+        if(País == 'brasil' ) {
+            res.innerHTML = 'Brasileiro lixo hue cancer apns'
+        }else{ res.innerHTML='Gringo mama rola'}
+    }
+
+    </script>
+</body>
+</html>

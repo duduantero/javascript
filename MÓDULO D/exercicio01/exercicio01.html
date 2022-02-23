@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do dia</title>
+    <style>
+        body{
+    background: rgb(141, 79, 141);
+
+}
+
+header{
+    color: white;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.404);
+    font-family:sans-serif;
+    font-size: 20px;
+
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.39);
+    
+
+}
+div{
+    text-align: center;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font: bold;
+    margin-top: 50px;
+    
+    
+
+}
+    </style>
+
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+    <section>
+        <div id='msg'>
+            Aqui vai aparecer mensagem
+        </div>
+        <div id='foto'>
+            <img id='imagem' src='noite.png' alt="Foto do dia">   
+        </div>
+    </section>
+    <footer>
+      <p>&copy;Eduardo Antero de Moraes</p>  
+    </footer>
+    <script>
+        var intervald = window.setInterval(() => {carregar()
+        
+    },1000);
+    
+    function carregar(){
+    
+        var msg = window.document.getElementById('msg')
+        var img = window.document.getElementById('imagem')
+        var data = new Date()
+        var hora = data.getHours()
+        var minuto = data.getMinutes()
+        var segundo = data.getSeconds()
+        msg.innerHTML = `Agora são ${hora}:${minuto}:${segundo}`
+        if(hora <= 12 ){img.src='manha.png'
+        document.body.style.background = 'rgb(180,223,251,9)'
+    }else if(hora <= 18){img.src='tarde.png'
+        document.body.style.background = 'rgb(150,92,81,0.9)'
+    }else if(hora > 18 ) {img.src='noite.png'
+        document.body.style.background = 'rgb(8,28,29,0.9)'}
+    }
+    </script>
+</body>
+</html>

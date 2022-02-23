@@ -1,0 +1,44 @@
+Analisador de número
+caixa com iput de dados númericos entre 1 e 100
+botão de adicionar, quando apertado ela ira adicionar os números em um array.
+Após os números adicionados e finalizar, quando adicionar um novo número devera limpar o resultado e deverá sem incoporado no final do array
+Avisos de erro :
+Números já adicionados não serão aceitos ( valor inválido ou já encontrado na lista)
+Números maiores de 100 também não serão aceitos ( valor inválido ou já encontrado na lista)
+
+
+select que apresentará os números adicionados no array
+
+BUTTON de finalizar
+Avisos de erro:
+Se tentar finalizar sem adicionar números (Adicione valores antes de finalizar)
+Ao clicar derverá apresentar os seguintes resultados:
+Total de números cadastrados
+O maior valor informado
+O menor valor informado
+Soma de todos os valores
+E a média dos valores digitados
+
+
+Número (entre 1 e 100): input de número; botão adicionar
+Exemplo:
+Dados estão dentro de um select:
+Valor 7 adicionado
+Valor 6 adicionado.
+Valor 9 adicionado.
+Valor 1 adicionado.
+Valor 2 adicionado.
+
+BUTTON finalizar
+
+Ao todo, temos 5 números cadastrados.
+
+O maior valor informado foi 9.
+
+O menor valor informado foi 1.
+
+Somando todos os valores, temos 25.
+
+A média dos valores digitados é 5.
+
+
